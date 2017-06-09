@@ -1,0 +1,62 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left
+}
+
+@mixin background($url) {
+    background-size: cover;
+    background-image: url($url);
+    background-position: center center;
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    transform: $property;
+}
+
+@mixin transition($property) {
+    -webkit-transition: $property;
+    transition: $property;
+}
+
+@mixin animation($property) {
+    -webkit-animation: $property;
+    -o-animation: $property;
+    -ms-animation: $property;
+    -moz-animation: $property;
+    animation: $property;
+}
+
+@mixin animation-delay($property) {
+    -webkit-animation-delay: $property;
+    animation-delay: $property;
+}
