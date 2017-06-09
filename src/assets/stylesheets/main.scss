@@ -1,0 +1,12 @@
+@import "helpers/variables";
+@import "../../vendors/bootstrap/scss/bootstrap";
+@import "base/reset";
+@import "helpers/mixin";
+
+@import "layout/navBar";
+@import "layout/footer";
+@import "pages/home";
+
+
+
+@import "override-bootstrap";
