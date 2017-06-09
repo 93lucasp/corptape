@@ -1,29 +1,26 @@
 // REQUIRE PACKAGE
-var gulp 			= require('gulp'),
-    connect 		= require('gulp-connect'),
-    handlebars 		= require('gulp-compile-handlebars'),
-    rename 			= require('gulp-rename'),
-    gulpPath 		= require('gulp-path'),
-    sourcemaps 		= require("gulp-sourcemaps"),
-    concat 			= require('gulp-concat'),
-    sass 			= require('gulp-sass'),
-    mainBowerFiles 	= require('gulp-main-bower-files');
+var gulp = require('gulp'),
+    connect = require('gulp-connect'),
+    handlebars = require('gulp-compile-handlebars'),
+    rename = require('gulp-rename'),
+    gulpPath = require('gulp-path'),
+    sourcemaps = require("gulp-sourcemaps"),
+    concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
+    mainBowerFiles = require('gulp-main-bower-files');
 
 // BOWER
 gulp.task('main-bower-files', function() {
-	return gulp.src('./bower.json')
-		.pipe(mainBowerFiles())
-		.pipe(gulp.dest('./src/vendors'));
+    return gulp.src('./bower.json')
+        .pipe(mainBowerFiles())
+        .pipe(gulp.dest('./src/vendors'));
 });
 
 // SASS
 gulp.task('sass', function() {
-	gulp.src('./src/assets/stylesheets/main.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./src/assets/stylesheets'));
-	return gulp.src('./src/assets/stylesheets/main.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./public/assets/stylesheets'));
+    return gulp.src('./src/assets/stylesheets/main.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./public/assets/stylesheets'));
 });
 
 gulp.task('sass:watch', function() {
@@ -35,8 +32,8 @@ gulp.task('hbs', function() {
     var options = {
         ignorePartials: true,
         batch: ['./src/view/partials']
-    }
-    return gulp.src('src/view/pages/*.hbs')
+    };
+    return gulp.src('src/view/pages/**/*.hbs')
         .pipe(handlebars("", options))
         .pipe(rename(function(path) {
             path.extname = ".html";
@@ -76,4 +73,4 @@ gulp.task('connect', function() {
 });
 
 // TASKS TO RUN
-gulp.task('default', ['hbs:watch', 'sass','sass:watch', 'img', 'js', 'vendors', 'main-bower-files', 'connect']);
+gulp.task('default', ['hbs:watch', 'sass', 'sass:watch', 'img', 'js', 'vendors', 'main-bower-files', 'connect']);
