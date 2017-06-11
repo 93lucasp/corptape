@@ -3,16 +3,40 @@ var App = function() {
     return {
 
         init: function() {
-            Barba.Pjax.start();
+            var width = $(document).width();
+            // Barba.Pjax.start();
             new WOW().init();
-        },
 
+            if (width > 992) {
+                this.navBarColor();
+                $(".owl-carousel").owlCarousel({
+                    nav: true,
+                    loop: true,
+                });
+
+            }
+            if (width < 992) {
+                $(".owl-carousel").owlCarousel({
+                    items: 1,
+                    nav: true,
+                    loop: true,
+
+                });
+            }
+        },
+        navBarColor: function() {
+            $(document).on('scroll', function() {
+                var scrollPosition = $(this).scrollTop();
+                scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
+                scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
+            });
+        },
         toggleClass: function(classToToggle) {
             $(classToToggle).slideToggle();
         },
         openMenuNav: function(e) {
             e.classList.toggle("is-active");
-            this.showMenu('.navBar__right');
+            this.showMenu('.navBar__menu');
 
         },
         showMenu: function(classTo) {

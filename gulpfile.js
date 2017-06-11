@@ -16,13 +16,17 @@ gulp.task('main-bower-files', function() {
         .pipe(gulp.dest('./src/vendors'));
 });
 
+
 // SASS
 gulp.task('sass', function() {
+    gulp.src('./src/assets/stylesheets/main.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./src/assets/stylesheets'));
     return gulp.src('./src/assets/stylesheets/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/assets/stylesheets'));
+        .pipe(gulp.dest('./public/assets/stylesheets'))
+        .pipe(connect.reload());
 });
-
 gulp.task('sass:watch', function() {
     gulp.watch('./src/assets/stylesheets/**/*.scss', ['sass']);
 });
@@ -49,17 +53,20 @@ gulp.task('hbs:watch', ['hbs'], function() {
 // DESTINATION PUBLIC
 gulp.task('img', function() {
     return gulp.src('src/assets/images/**/*')
-        .pipe(gulp.dest('public/assets/images'));
+        .pipe(gulp.dest('public/assets/images'))
+        .pipe(connect.reload());
 });
 
 gulp.task('js', function() {
     return gulp.src('src/js/**/*')
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('public/js'))
+        .pipe(connect.reload());
 });
 
 gulp.task('vendors', function() {
     return gulp.src('src/vendors/**/*')
-        .pipe(gulp.dest('public/vendors'));
+        .pipe(gulp.dest('public/vendors'))
+        .pipe(connect.reload());
 });
 
 // CONNECTION SERVER

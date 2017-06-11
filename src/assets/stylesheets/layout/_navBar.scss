@@ -1,0 +1,167 @@
+.navBar-social {
+    @include size(100%, 2.2em);
+    @include position(fixed, 0, 0, 0, null);
+
+    background-color: map-get($colors, white_transparence);
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        display: none;
+    }
+    ul {
+        float: right;
+        @include margin(0, 0, 0, 0);
+        li {
+            display: inline-block;
+            @include margin(null, null, null, 1em);
+            a {
+                color: map-get($colors, white);
+                img {
+                	@include size(1.4em, null);
+                }
+            }
+        }
+    }
+}
+
+.navBar {
+    @include size(100%, 4em);
+    @include position(fixed, 2.2em, 0, 0, null);
+    @include transition(.3s ease);
+    display: flex;
+    align-items: center;
+    color: map-get($colors, white);
+    z-index: 9;
+    &__logo {
+        display: inline-block;
+        float: left;
+        h3 {
+            @include margin(0, 0, 0, 0);
+        }
+    }
+    &__menu {
+        display: inline-block;
+        float: right;
+        ul {
+            @include margin(0, 0, 0, 0);
+            li {
+                display: inline-block;
+                @include margin(null, null, null, 2em);
+                a {
+                    color: map-get($colors, white);
+                    position: relative;
+                    &:after {
+                        @include size(100%, 1em);
+                        @include transform(scale(0, 1));
+                        @include position(absolute, null, null, -.3em, 0);
+                        content: '';
+                        display: inline-block;
+                        border-bottom: 1px solid;
+                        opacity: 0;
+                        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                        transition: opacity 0.35s, transform 0.35s;
+                    }
+                    &:hover {
+                        &:after {
+                            @include transform(scale(1));
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__hamburger {
+        float: right;
+        display: inline-block;
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+        &--arrow {
+            &.is-active {
+                .hamburger-inner {
+                    &:before {
+                        @include transform(translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1));
+                    }
+                    &:after {
+                        @include transform(translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1));
+                    }
+                }
+            }
+        }
+        .hamburger-box {
+            @include size(35px, 24px);
+            display: inline-block;
+            position: relative;
+            .inner {
+                @include size(35px, 4px);
+                @include position(absolute, null, null, null, null);
+                @include transition(ease 0.15s);
+                display: block;
+                border-radius: 4px;
+                background-color: map-get($colors, white);
+            }
+            .hamburger-inner {
+                @extend .inner;
+                @include margin(2px, null, null, null);
+                @include position(null, 50%, null, null, null);
+                &:before,
+                &:after {
+                    @extend .inner;
+                    content: "";
+                }
+                &:before {
+                    @include position(null, -8px, null, null, null);
+                }
+                &:after {
+                    @include position(null, null, null, -8px, null);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, lg)) {
+    .navBar-social {
+        display: none;
+    }
+    .navBar {
+    	background-color: map-get($colors, primary);
+    	@include position(fixed, 0, 0, 0, null);
+    	.container {
+    		
+
+    	}
+        &__menu {
+        	@include size(100%, 100vh);
+        	@include position(fixed, 4em, 0, 0, null);
+            display: inline-block;
+            float: none;
+            display: none;
+            background-color: #f35860;
+            ul {
+                @include margin(0, 0, 0, 0);
+                @include padding(0, 0, 0, 0);
+                li {
+                    display: block;
+                    @include padding(1em, 9em, 1em, 9em);
+                    @include margin(0, 0, 0, 0);
+                    border-bottom: 1px solid #fff;
+                    &:after {
+                    	content: '\f054';
+                    	font-family: fontAwesome;
+                    	@include position(absolute, null, 9.5em, null, null);
+                    }
+                    a {
+                    	font-size: 1.2em;
+                    	font-weight: 600;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

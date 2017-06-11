@@ -1,0 +1,34 @@
+.home {
+    &__content {
+    	text-align: center;
+        position: relative;
+        @include padding(2em, 0, 2em, 0);
+        &__title {
+        	margin-bottom: 1.4em;
+        }
+        .owl-prev {
+            color: transparent;
+            position: absolute;
+            @include calc(top, '50% - 1.4em');
+            left: -2em;
+            &:before {
+                content: '\f104';
+                font-family: fontAwesome;
+                color: map-get($colors, primary);
+                font-size: 1.8em;
+            }
+        }
+        .owl-next {
+            color: transparent;
+            position: absolute;
+            @include calc(top, '50% - 1.4em');
+            right: -2em;
+            &:after {
+                content: '\f105';
+                font-family: fontAwesome;
+                color: map-get($colors, primary);
+                font-size: 1.8em;
+            }
+        }
+    }
+}

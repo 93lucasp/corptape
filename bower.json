@@ -51,7 +51,7 @@
         "./animate.min.css"
       ]
     },
-    "font_awesome": {
+    "components-font-awesome": {
       "main": [
         "./fonts/**/*",
         "./css/font-awesome.css"
