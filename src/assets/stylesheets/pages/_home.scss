@@ -1,10 +1,10 @@
 .home {
     &__content {
-    	text-align: center;
+        text-align: center;
         position: relative;
         @include padding(2em, 0, 2em, 0);
         &__title {
-        	margin-bottom: 1.4em;
+            margin-bottom: 1.4em;
         }
         .owl-prev {
             color: transparent;
@@ -29,6 +29,14 @@
                 color: map-get($colors, primary);
                 font-size: 1.8em;
             }
+        }
+    }
+    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        .owl-prev {
+            left: -.5em;
+        }
+        .owl-next {
+            right: -.5em;
         }
     }
 }

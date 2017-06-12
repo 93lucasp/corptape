@@ -38,6 +38,9 @@
         float: left;
         h3 {
             @include margin(0, 0, 0, 0);
+            a {
+            	color: #fff;
+            }
         }
     }
     &__menu {
@@ -130,8 +133,7 @@
     	background-color: map-get($colors, primary);
     	@include position(fixed, 0, 0, 0, null);
     	.container {
-    		
-
+    		width: 100%;
     	}
         &__menu {
         	@include size(100%, 100vh);
@@ -145,13 +147,13 @@
                 @include padding(0, 0, 0, 0);
                 li {
                     display: block;
-                    @include padding(1em, 9em, 1em, 9em);
+                    @include padding(1em, 1em, 1em, 1em);
                     @include margin(0, 0, 0, 0);
                     border-bottom: 1px solid #fff;
                     &:after {
                     	content: '\f054';
                     	font-family: fontAwesome;
-                    	@include position(absolute, null, 9.5em, null, null);
+                    	@include position(absolute, null, 1em, null, null);
                     }
                     a {
                     	font-size: 1.2em;
