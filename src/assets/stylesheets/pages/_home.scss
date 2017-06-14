@@ -1,34 +1,51 @@
 .home {
     &__content {
-        text-align: center;
         position: relative;
-        @include padding(2em, 0, 2em, 0);
+        @include padding(0, 0, 2em, 0);
         &__title {
             margin-bottom: 1.4em;
         }
-        .owl-prev {
-            color: transparent;
-            position: absolute;
-            @include calc(top, '50% - 1.4em');
-            left: -2em;
-            &:before {
-                content: '\f104';
-                font-family: fontAwesome;
-                color: map-get($colors, primary);
-                font-size: 1.8em;
+        section {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        }
+        &__interviews {
+            text-align: center;
+            .owl-prev {
+                color: transparent;
+                position: absolute;
+                @include calc(top, '50% - 1.4em');
+                left: -2em;
+                &:before {
+                    content: '\f104';
+                    font-family: fontAwesome;
+                    color: map-get($colors, primary);
+                    font-size: 1.8em;
+                }
+            }
+            .owl-next {
+                color: transparent;
+                position: absolute;
+                @include calc(top, '50% - 1.4em');
+                right: -2em;
+                &:after {
+                    content: '\f105';
+                    font-family: fontAwesome;
+                    color: map-get($colors, primary);
+                    font-size: 1.8em;
+                }
             }
         }
-        .owl-next {
-            color: transparent;
-            position: absolute;
-            @include calc(top, '50% - 1.4em');
-            right: -2em;
-            &:after {
-                content: '\f105';
-                font-family: fontAwesome;
-                color: map-get($colors, primary);
-                font-size: 1.8em;
-            }
+        &__cta {
+            background-color: map-get($colors, primary);
+            text-align: center;
+            position: relative;
+            color: map-get($colors, white);
+            
+            
+        }
+        &__articles {
+
         }
     }
     @media screen and (max-width: map-get($grid-breakpoints, lg)) {

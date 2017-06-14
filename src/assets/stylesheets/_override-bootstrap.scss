@@ -1,0 +1,7 @@
+.btn-secondary {
+	border-radius:50px;
+	color: map-get($colors, primary)!important;
+	background-color: map-get($colors, white);
+cursor: pointer;
+	border:0;
+}
