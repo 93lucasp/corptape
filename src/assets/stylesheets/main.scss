@@ -3,11 +3,12 @@
 @import "helpers/mixin";
 @import "base/reset";
 
+@import "shared-elements";
 @import "layout/navBar";
 @import "layout/footer";
 @import "layout/heros";
 @import "pages/home";
 
-@import "shared-elements";
+
 
 @import "override-bootstrap";

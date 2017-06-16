@@ -1,59 +1,51 @@
 .home {
     &__content {
-        position: relative;
         @include padding(0, 0, 2em, 0);
+        position: relative;
         &__title {
-            margin-bottom: 1.4em;
-        }
-        section {
-            padding-top: 4em;
-            padding-bottom: 4em;
+            @include padding(null, null, 1.4em, null);
         }
         &__interviews {
             text-align: center;
-            .owl-prev {
-                color: transparent;
-                position: absolute;
+            .owlNavigation {
+                @include position(absolute, null, null, null, null);
                 @include calc(top, '50% - 1.4em');
-                left: -2em;
+                color: transparent;
+                &:before,
+                &:after {
+                    font-family: fontAwesome;
+                    font-size: 1.8em;
+                    color: map-get($colors, primary);
+                }
+            }
+            .owl-prev {
+                @extend .owlNavigation;
+                @include position(null, null, null, null, -2em);
                 &:before {
                     content: '\f104';
-                    font-family: fontAwesome;
-                    color: map-get($colors, primary);
-                    font-size: 1.8em;
                 }
             }
             .owl-next {
-                color: transparent;
-                position: absolute;
-                @include calc(top, '50% - 1.4em');
-                right: -2em;
+                @extend .owlNavigation;
+                @include position(null, null, -2em, null, null);
                 &:after {
                     content: '\f105';
-                    font-family: fontAwesome;
-                    color: map-get($colors, primary);
-                    font-size: 1.8em;
                 }
             }
         }
         &__cta {
-            background-color: map-get($colors, primary);
             text-align: center;
             position: relative;
             color: map-get($colors, white);
-            
-            
-        }
-        &__articles {
-
+            background-color: map-get($colors, secondary);
         }
     }
     @media screen and (max-width: map-get($grid-breakpoints, lg)) {
         .owl-prev {
-            left: -.5em;
+            @include position(null, null, null, null, -.4em);
         }
         .owl-next {
-            right: -.5em;
+            @include position(null, null, -.4em, null, null);
         }
     }
 }

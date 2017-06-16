@@ -48,6 +48,11 @@
     transition: $property;
 }
 
+@mixin transition-transform($property1, $property2) {
+    -webkit-transition: $property1, $property2;
+    transition: $property1, $property2;
+}
+
 @mixin animation($property) {
     -webkit-animation: $property;
     -o-animation: $property;
@@ -59,4 +64,12 @@
 @mixin animation-delay($property) {
     -webkit-animation-delay: $property;
     animation-delay: $property;
+}
+
+@mixin breakLine($num) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }

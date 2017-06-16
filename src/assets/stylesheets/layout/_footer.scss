@@ -1,0 +1,42 @@
+.footer {
+    @extend .vertical-center;
+    @include size(100%, null);
+    @include padding(1em, null, 1em, null);
+    color: map-get($colors, white);
+    background-color: map-get($colors, primary);
+    &__social {
+        text-align: right;
+        ul {
+            @include margin(0, 0, 0, 0);
+        }
+        li {
+            @include size(2em, 2em);
+            @include margin(null, null, null, 1em);
+            display: inline-block;
+            position: relative;
+            border-radius: 50%;
+            &:after,
+            &:before {
+                @include position(absolute, 0, 0, 0, 0);
+                @include transition(.3s all);
+                content: "";
+                display: block;
+                border-radius: 50%;
+                border: 1px solid map-get($colors, white);
+                background-color: transparent;
+            }
+            &:hover {
+                &:after {
+                    @include transform(scale(1.5));
+                }
+                &:before {
+                    @include transform(scale(2));
+                    opacity: 0;
+                }
+            }
+            img {
+                @include size(2em, null);
+            }
+        }
+    }
+}
