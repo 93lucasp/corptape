@@ -3,12 +3,23 @@ var App = function() {
     return {
 
         init: function() {
-            var width = $(document).width();
             // Barba.Pjax.start();
             new WOW().init();
-
+            this.carousel();
+            this.navBarColor();
+            this.loadMore();
+        },
+        loadMore: function() {
+            $(".load").slice(0, 6).show();
+            $("#loadMore").on('click', function(e) {
+                e.preventDefault();
+                $(".load:hidden").slice(0, 3).slideDown();
+            });
+        },
+        carousel: function() {
+            var width = $(document).width();
             if (width > 992) {
-                this.navBarColor();
+
                 $(".owl-carousel").owlCarousel({
                     nav: true,
                     loop: true,
@@ -20,16 +31,22 @@ var App = function() {
                     items: 1,
                     nav: true,
                     loop: true,
-
                 });
             }
         },
-        navBarColor: function() {
+        navBarDesktop: function() {
             $(document).on('scroll', function() {
+                var width = $(document).width();
                 var scrollPosition = $(this).scrollTop();
                 scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
                 scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
             });
+        },
+        navBarColor: function() {
+            var width = $(document).width();
+            if (width > 992) {
+                this.navBarDesktop();
+            }
         },
         toggleClass: function(classToToggle) {
             $(classToToggle).slideToggle();
@@ -77,5 +94,6 @@ var App = function() {
     };
 }();
 $(document).ready(function() {
+
     App.init();
 });

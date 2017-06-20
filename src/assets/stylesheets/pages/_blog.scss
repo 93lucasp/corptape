@@ -1,0 +1,16 @@
+.blog {
+    &__content {
+        @include padding(6em, null, 4em, null);
+        position: relative;
+        &__title {
+            @include padding(null, null, 1.4em, null);
+        }
+        &__cta {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: map-get($colors, white);
+            background-color: map-get($colors, gray_2);
+        }
+    }
+}

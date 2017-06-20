@@ -2,11 +2,18 @@
     &__content {
         @include padding(0, 0, 2em, 0);
         position: relative;
+        .articleBox {
+            @include margin(null, null, 1em, null);
+        }
         &__title {
             @include padding(null, null, 1.4em, null);
         }
         &__interviews {
             text-align: center;
+            .owl-carousel {
+                @include size(94%, null);
+                @include margin(null, auto, null, auto);
+            }
             .owlNavigation {
                 @include position(absolute, null, null, null, null);
                 @include calc(top, '50% - 1.4em');
@@ -40,12 +47,18 @@
             background-color: map-get($colors, secondary);
         }
     }
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        .embed-responsive {
+            @include size(92%, null);
+            @include margin(null, auto, null, auto);
+        }
+    }
     @media screen and (max-width: map-get($grid-breakpoints, lg)) {
         .owl-prev {
-            @include position(null, null, null, null, -.4em);
+            @include position(null, null, null, null, -1.2em);
         }
         .owl-next {
-            @include position(null, null, -.4em, null, null);
+            @include position(null, null, -1.2em, null, null);
         }
     }
 }

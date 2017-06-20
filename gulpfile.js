@@ -8,6 +8,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     mainBowerFiles = require('gulp-main-bower-files');
+uglify = require("gulp-uglify");
+cleanCSS = require('gulp-clean-css');
+
 
 // BOWER
 gulp.task('main-bower-files', function() {
@@ -26,6 +29,7 @@ gulp.task('sass', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/assets/stylesheets'))
         .pipe(connect.reload());
+
 });
 gulp.task('sass:watch', function() {
     gulp.watch('./src/assets/stylesheets/**/*.scss', ['sass']);
@@ -53,8 +57,7 @@ gulp.task('hbs:watch', ['hbs'], function() {
 // DESTINATION PUBLIC
 gulp.task('img', function() {
     return gulp.src('src/assets/images/**/*')
-        .pipe(gulp.dest('public/assets/images'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('public/assets/images'));
 });
 
 gulp.task('js', function() {
@@ -69,6 +72,38 @@ gulp.task('vendors', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('minify-js', function() {
+    gulp.src('src/js/app.js') // path to your files
+        .pipe(uglify())
+        .pipe(rename(function(path) {
+            path.extname = ".min.js";
+        }))
+        .pipe(gulp.dest('src/js'));
+    return gulp.src('src/js/app.js') // path to your files
+        .pipe(uglify())
+        .pipe(rename(function(path) {
+            path.extname = ".min.js";
+        }))
+        .pipe(gulp.dest('public/js'));
+});
+
+gulp.task('minify-css', function() {
+    gulp.src('./src/assets/stylesheets/main.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename(function(path) {
+            path.extname = ".min.css";
+        }))
+        .pipe(gulp.dest('./src/assets/stylesheets'));
+    return gulp.src('./src/assets/stylesheets/main.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename(function(path) {
+            path.extname = ".min.css";
+        }))
+        .pipe(gulp.dest('./public/assets/stylesheets'));
+});
+
+
+
 // CONNECTION SERVER
 gulp.task('connect', function() {
     connect.server({
@@ -80,4 +115,4 @@ gulp.task('connect', function() {
 });
 
 // TASKS TO RUN
-gulp.task('default', ['hbs:watch', 'sass', 'sass:watch', 'img', 'js', 'vendors', 'main-bower-files', 'connect']);
+gulp.task('default', ['hbs:watch', 'sass', 'sass:watch', 'img', 'js', 'minify-js', 'minify-css', 'vendors', 'main-bower-files', 'connect']);

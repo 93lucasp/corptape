@@ -1,5 +1,5 @@
 .hero {
-	@extend .vertical-center;
+    @extend .vertical-center;
     @include size(100%, 36em);
     &__box {
         @include size(60%, null);
@@ -27,6 +27,25 @@
         }
     }
     &--contacts {
+        .hero__box {
+            @include padding(3em, 0, 3em, 0);
+        }
         @include background('/assets/images/heros/contacts.jpg');
+        @include size(100%, 100vh);
+        color: map-get($colors, white);
+        &__title {
+            @include padding(null, null, 1em, null);
+        }
+        .btn-secondary {
+            @include margin(null, 1em, null, 1em);
+        }
+    }
+    &--interviews {
+        @include background('/assets/images/heros/interviews.jpg');
+        color: map-get($colors, white);
+    }
+    &--blog {
+        @include background('/assets/images/heros/blog.jpg');
+        color: map-get($colors, white);
     }
 }

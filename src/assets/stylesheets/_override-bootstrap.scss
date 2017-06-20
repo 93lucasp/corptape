@@ -16,3 +16,17 @@
     	background-color: map-get($colors, primary);
     }
 }
+
+.btn-more {
+    @include size(20%,null);
+    color: map-get($colors, primary)!important;
+    background-color: map-get($colors, white);
+    border: 1px solid map-get($colors, primary)!important;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    &:focus {
+        box-shadow: none;
+    }
+    
+}

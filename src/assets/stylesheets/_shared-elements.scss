@@ -9,12 +9,13 @@
 
 .articleBox {
     @include transition(ease .1s);
-    @include margin(null, null, 1em, null);
+    @include margin(null, null, 6em, null);
     border: 1px solid map-get($colors, gray);
     border-radius: 5px;
+
     &:hover {
-        @include transition(translate(0, -8px));
-        box-shadow: 0 5px 16px -8px map-get($colors, gray);
+        @include transform(translate(0, -8px));
+        box-shadow: 0 5px 16px -8px grey;
     }
     &__header {
         @include size(100%, 14em);
@@ -26,8 +27,8 @@
         @include margin(1em, .5em, 1em, .5em);
         &__title {
             @include size(null, 2.15em);
+            @include margin(null, null, .8em, null);
             @include breakLine(2);
-            
         }
         &__description {
             @include margin(1em, null, null, null);
@@ -41,8 +42,39 @@
     }
 }
 
+.videoBox {
+    @include transition(ease .1s);
+    @include margin(null, null, 6em, null);
+    border: 1px solid map-get($colors, gray);
+    border-radius: 5px;
+    &:hover {
+        @include transform(translate(0, -8px));
+        box-shadow: 0 5px 16px -8px map-get($colors, gray_3);
+    }
+    &__header {
+        @include size(100%, 14em);
+    }
+    &__content {
+        @include margin(1em, .5em, 1em, .5em);
+        &__title {
+            @include margin(null, null, .8em, null);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__description {
+            @include margin(1em, null, null, null);
+            @include breakLine(5);
+            color: map-get($colors, gray_1);
+        }
+    }
+}
+
 section {
     @include padding(4em, null, 4em, null);
+}
+.load {
+    display: none;
 }
 
 // white-space: nowrap;

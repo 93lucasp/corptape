@@ -4,10 +4,14 @@
     @include padding(1em, null, 1em, null);
     color: map-get($colors, white);
     background-color: map-get($colors, primary);
+    &__copy {
+        text-align: center;
+    }
     &__social {
-        text-align: right;
+        text-align: center;
         ul {
             @include margin(0, 0, 0, 0);
+            @include padding(0, 0, 0, 0);
         }
         li {
             @include size(2em, 2em);
@@ -37,6 +41,25 @@
             img {
                 @include size(2em, null);
             }
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        &__social {
+            text-align: right;
+        }
+        &__copy {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        &__copy {
+            @include margin(null, null, 1em, null);
         }
     }
 }
