@@ -9,11 +9,14 @@ Corptape is a magazine about startup, tech and digital.
 * CSS3
 * Sass
 * Bootstrap 4
+* JavaScript
+* jQuery
 * Gulp
 
 ### How to update the template (for the client)
 
 #### Article
+
 ##### How to create a new page
 To create a new page go inside the articles folder and create a new file (nameArticle.html).
 Once created, copy all the code inside the file article.html and paste it inside your new file(nameArticle.html)
@@ -39,5 +42,19 @@ Here change the content adding the title of the article.
 Here change the content adding the description of the article.
 
 * ```<meta property="og:image" content="" />```
-Here add inside content the path of the image of the article.
+Here add in the content the path of the image of the article.
+
+##### Where to add images
+All the images about an article MUST to be inside the following folder: ```/assets/images/articles```.
+
+##### Content article
+Inside the following div ```<div class="container container--article">``` 
+You will find ```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` that code will add to your article an immage, to add it just give to the last word(image.jpg) the name of your image that you added.
+
+If you don't want an image but you prefer a video remove this code ```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` and add the following code: 
+```<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KcK0QRT73ag" allowfullscreen></iframe></div>```
+And change src with the url of the video.
+
+
+
 
