@@ -134,6 +134,9 @@ Wrape it inside the following tag:
 ```
 Change ```www.corptape.com``` with the url of the article
 
+##### Where to add images
+All the images about an article MUST to be inside the following folder: ```/assets/images/articles```.
+
 #### List Article (blog page)
 ##### How to update the list of articles
 Go to the file ```blog.html```<br>
