@@ -50,7 +50,7 @@ All the images about an article MUST to be inside the following folder: ```/asse
 ##### Content article
 Inside the following div 
 ```<div class="container container--article">``` 
-You will find ```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` that code will add to your article an immage, to add it just give to the last word(image.jpg) the name of your image that you added.
+You will find <br>```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` <br>that code will add to your article an immage, to add it just give to the last word(image.jpg) the name of your image that you added.
 
 If you don't want an image but you prefer a video remove this code <br>
 ```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` <br>
@@ -58,9 +58,58 @@ and add the following code: <br>
 ```<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KcK0QRT73ag" allowfullscreen></iframe></div>```<br>
 And change src with the url of the video.
 
-the file article will be just an example in the follow step I'll explain how to compose an articles with the blocks.
+the file article will be just an example of the classic order of text and images, in the following step I'll explain how to compose an articles with the blocks.
+From now you can delete all the code present after the image div and follow the next instructions:
 
-If you
+* How to add the title of the article?
+```
+<h1 class="article__title">
+	Here your tile
+</h1>
+```
+
+* How to add an author for the article?
+``` 
+<div class="article__author">
+	<div class="article__author__pic" style="background-image: url(/assets/images/authors/daniele.jpg)"></div>
+	<h6 class="article__author__name"> Daniele</h6>
+	<h6 class="article__author__category">| Interviste</h6>
+	<p class="article__author__date">| 12/06/2017</p>
+</div>
+```
+Add the picture of the author inside the following path ```/assets/images/authors``` and after change the last word of url(daniele.jpg) with the name of your image.
+
+* How to add text?
+``` 
+<p class="article__text">
+	Your text here...
+</p>
+``` 
+
+* How to add an image secondary?
+```
+<div class="article__imageSecondary" style="background-image: url(/assets/images/articles/daniele.jpg)"></div>
+```
+Change again just last words after adding it in the articles folder
+
+* How to make a word with the primary color?
+Wrape it inside the following tag:
+```
+<span class="cl-primary">Your word here</span>
+```
+
+* How to make a word bold?
+Wrape it inside the following tag:
+```
+<span class="bold">Your word here</span>
+```
+
+* How to add a cit block like that?
+
+
+
+
+
 
 
 
