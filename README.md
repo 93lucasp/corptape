@@ -105,7 +105,7 @@ Wrape it inside the following tag:
 ```
 
 * How to add a cit block like that?
-![alt text](/readme-images/cit.png "Logo Title Text 1")
+![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/cit.png "Logo Title Text 1")
 
 
 
