@@ -13,7 +13,7 @@ Corptape is a magazine about startup, tech and digital.
 * jQuery
 * Gulp
 
-### How to update the template (for the client)
+### How to update the template (This is a guide so that the client can easily update the template from the code)
 
 #### Article
 
@@ -144,6 +144,15 @@ change (blog1) with the name of your image.<br>
 **To change the title:**<br> ```<h3 class="articleBox__content__title">text here</h3>``` chanage the text inside that tag.<br>
 **To change the description:**<br> ```<p class="articleBox__content__description">description here </p>``` chanage the text inside that tag.<br>
 **To change the link where to go:**<br> ``` <a href="/articles/article.html" class="btn btn-primary articleBox__content__button">Leggi di più</a> ``` just change (article.html) with the name of the page.
+
+#### List Interviews (interviews page)
+##### How to update the list of the interviews
+Go to the file ```interviews.html```<br>
+Find the div: ```<div class="interviews__content">``` inside that find the div <br>
+```<div class="col-lg-4">``` so copy all that div from the beginning to the end and past it just before it at the same level. <br>
+**To change the video:**```<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NBOb_1T5Bbo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> ``` <br>
+Change the url before the question mark **?** and leave what is after it. <br>
+**To change the title:**<br> ```<h3 class="videoBox__content__title">text here</h3>``` chanage the text inside that tag.<br>
 
 
 
