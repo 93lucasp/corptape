@@ -52,11 +52,16 @@ Inside the following div
 ```<div class="container container--article">``` 
 You will find ```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` that code will add to your article an immage, to add it just give to the last word(image.jpg) the name of your image that you added.
 
-If you don't want an image but you prefer a video remove this code 
-```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` 
-and add the following code: 
-```<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KcK0QRT73ag" allowfullscreen></iframe></div>```
+If you don't want an image but you prefer a video remove this code <br>
+```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` <br>
+and add the following code: <br>
+```<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KcK0QRT73ag" allowfullscreen></iframe></div>```<br>
 And change src with the url of the video.
+
+the file article will be just an example in the follow step I'll explain how to compose an articles with the blocks.
+
+If you
+
 
 
 
