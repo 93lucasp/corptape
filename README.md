@@ -1,6 +1,6 @@
 # Corptape
-
-### What is it?
+Give a look: www.corptape.com
+### What is Corptape?
 Corptape is a magazine about startup, tech and digital.
 
 ### Technologies
@@ -71,27 +71,24 @@ From now you can delete all the code present after the image div and follow the 
 * How to add secondary titles in the article?
 ```
 <h2 class="article__title"> 
-	Title here
+  Title here
 </h2>
 ```
 
 * How to add an author for the article?
-![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/author.png "Cit block")
 ``` 
 <div class="article__author">
-	<div class="article__author__pic" style="background-image: url(/assets/images/authors/daniele.jpg)"></div>
-	<h6 class="article__author__name"> Daniele</h6>
-	<h6 class="article__author__category">| Interviste</h6>
-	<p class="article__author__date">| 12/06/2017</p>
+  <div class="article__author__pic" style="background-image: url(/assets/images/authors/daniele.jpg)"></div>
+  <h6 class="article__author__name"> Daniele</h6>
+  <h6 class="article__author__category">| Interviste</h6>
+  <p class="article__author__date">| 12/06/2017</p>
 </div>
 ```
 Add the picture of the author inside the following path ```/assets/images/authors``` and after change the last word of url(daniele.jpg) with the name of your image.
 
 * How to add text?
 ``` 
-<p class="article__text">
-	Your text here...
-</p>
+<p class="article__text">Your text here...</p>
 ``` 
 
 * How to add an image secondary?
@@ -101,7 +98,6 @@ Add the picture of the author inside the following path ```/assets/images/author
 Change again just last words after adding it in the articles folder
 
 * How to make a word with the primary color?
-![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/color.png "color word")
 Wrape it inside the following tag:
 ```
 <span class="cl-primary">Your word here</span>
@@ -116,29 +112,27 @@ Wrape it inside the following tag:
 * How to add a cit block like that?
 ![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/cit.png "Cit block")
 ```
-<p class="article__cit">
-	Your text here
-</p>
+<p class="article__cit">Your text here</p>
 ```
 * How to add link to share the article?
 ```
 <div class="article__share">
-	<i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
-	<ul>
-		<li>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com">
-				<img src="/assets/images/social/facebook.png">
-			</a>
-		</li>
-		<li>
-			<a href="https://plus.google.com/share?url=www.corptape.com">
-				<img src="/assets/images/social/googleplus.png">
-			</a>
-		</li>
-	</ul>
+  <i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
+  <ul>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com">
+	    <img src="/assets/images/social/facebook.png">
+	  </a>
+	 </li>
+	 <li>
+	   <a href="https://plus.google.com/share?url=www.corptape.com">
+	     <img src="/assets/images/social/googleplus.png">
+	   </a>
+	</li>
+  </ul>
 </div>
 ```
-Change www.corptape.com with the url of the article
+Change ```www.corptape.com``` with the url of the article
 
 
 
