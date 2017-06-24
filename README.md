@@ -69,6 +69,7 @@ From now you can delete all the code present after the image div and follow the 
 ```
 
 * How to add an author for the article?
+![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/author.png "Cit block")
 ``` 
 <div class="article__author">
 	<div class="article__author__pic" style="background-image: url(/assets/images/authors/daniele.jpg)"></div>
@@ -96,6 +97,7 @@ Change again just last words after adding it in the articles folder
 Wrape it inside the following tag:
 ```
 <span class="cl-primary">Your word here</span>
+![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/color.png "color word")
 ```
 
 * How to make a word bold?
@@ -105,7 +107,7 @@ Wrape it inside the following tag:
 ```
 
 * How to add a cit block like that?
-![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/cit.png "Logo Title Text 1")
+![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/cit.png "Cit block")
 
 
 
