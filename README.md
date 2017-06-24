@@ -68,6 +68,13 @@ From now you can delete all the code present after the image div and follow the 
 </h1>
 ```
 
+* How to add secondary titles in the article?
+```
+<h2 class="article__title"> 
+	Title here
+</h2>
+```
+
 * How to add an author for the article?
 ![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/author.png "Cit block")
 ``` 
@@ -94,10 +101,10 @@ Add the picture of the author inside the following path ```/assets/images/author
 Change again just last words after adding it in the articles folder
 
 * How to make a word with the primary color?
+![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/color.png "color word")
 Wrape it inside the following tag:
 ```
 <span class="cl-primary">Your word here</span>
-![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/color.png "color word")
 ```
 
 * How to make a word bold?
@@ -108,6 +115,30 @@ Wrape it inside the following tag:
 
 * How to add a cit block like that?
 ![alt text](https://github.com/93lucasp/corptape/blob/master/src/readme-images/cit.png "Cit block")
+```
+<p class="article__cit">
+	Your text here
+</p>
+```
+* How to add link to share the article?
+```
+<div class="article__share">
+	<i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
+	<ul>
+		<li>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com">
+				<img src="/assets/images/social/facebook.png">
+			</a>
+		</li>
+		<li>
+			<a href="https://plus.google.com/share?url=www.corptape.com">
+				<img src="/assets/images/social/googleplus.png">
+			</a>
+		</li>
+	</ul>
+</div>
+```
+Change www.corptape.com with the url of the article
 
 
 
