@@ -120,6 +120,7 @@ Wrape it inside the following tag:
   <i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
   <ul>
     <li><a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com"><img src="/assets/images/social/facebook.png"></a></li>
+    
 	<li><a href="https://plus.google.com/share?url=www.corptape.com"><img src="/assets/images/social/googleplus.png"></a></li>
   </ul>
 </div>
