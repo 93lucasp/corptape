@@ -49,7 +49,7 @@ All the images about an article MUST to be inside the following folder: ```/asse
 
 ##### Content article
 Inside the following div 
-```<div class="container container--article">``` 
+```<div class="container container--article">```<br> 
 You will find <br>```<div class="article__image" style="background-image: url(/assets/images/articles/image.jpg)"></div>``` <br>that code will add to your article an immage, to add it just give to the last word(image.jpg) the name of your image that you added.
 
 If you don't want an image but you prefer a video remove this code <br>
@@ -133,6 +133,17 @@ Wrape it inside the following tag:
 </div>
 ```
 Change ```www.corptape.com``` with the url of the article
+
+#### List Article (blog page)
+##### How to update the list of articles
+Go to the file ```blog.html```<br>
+Find the div: ```<div class="blog__content">``` <br>inside that find the div <br>
+```<div class="col-lg-4">``` so copy all that div from the beginning to the end and past it just before it at the same level. <br>
+Then to change the image:<br> ```<div class="articleBox__header" style="background-image: url('/assets/images/articles/blog1.jpg')"></div> ``` <br>
+change (blog1) with the name of your image.<br>
+To change the title:<br> ```<h3 class="articleBox__content__title">text here</h3>``` chanage teh text inside that tag.<br>
+To change the description:<br> ```<p class="articleBox__content__description">description here </p>``` chanage the text inside that tag.<br>
+To change the link where to go:<br> ``` <a href="/articles/article.html" class="btn btn-primary articleBox__content__button">Leggi di più</a> ``` just change (article.html) with the name of the page.
 
 
 
