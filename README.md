@@ -117,12 +117,19 @@ Wrape it inside the following tag:
 * How to add link to share the article?
 ```
 <div class="article__share">
-  <i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
-  <ul>
-    <li><a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com"><img src="/assets/images/social/facebook.png"></a></li>
-    
-	<li><a href="https://plus.google.com/share?url=www.corptape.com"><img src="/assets/images/social/googleplus.png"></a></li>
-  </ul>
+	<i class="fa fa-share-alt-square" aria-hidden="true"></i>Share on
+	<ul>
+		<li>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=www.corptape.com">
+				<img src="/assets/images/social/facebook.png">
+			</a>
+		</li>
+		<li>
+			<a href="https://plus.google.com/share?url=www.corptape.com">
+				<img src="/assets/images/social/googleplus.png">
+			</a>
+		</li>
+	</ul>
 </div>
 ```
 Change ```www.corptape.com``` with the url of the article
