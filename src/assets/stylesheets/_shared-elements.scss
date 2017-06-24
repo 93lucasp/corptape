@@ -1,18 +1,46 @@
+// BACKGROUNDS
+.cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+// ALIGMENTS
 .vertical-center {
     display: flex;
     align-items: center;
 }
 
+// COLORS
+.cl-primary {
+    color: map-get($colors, primary);
+}
+// WIGHTS
+.bold {
+    font-weight: bold;
+}
+// FONTS
+.font-paragraph-bigger {
+    font-size: 1.2em;
+}
+// MAARGINS
 .m-t-1 {
     @include margin(1em, null, null, null);
 }
-
+.m-t-2 {
+    @include margin(2em, null, null, null);
+}
+.m-b-1 {
+    @include margin(null, null, 1em, null);
+}
+.m-b-2 {
+    @include margin(null, null, 1em, null);
+}
+// BLOCKS
 .articleBox {
     @include transition(ease .1s);
     @include margin(null, null, 6em, null);
     border: 1px solid map-get($colors, gray);
     border-radius: 5px;
-
     &:hover {
         @include transform(translate(0, -8px));
         box-shadow: 0 5px 16px -8px grey;
@@ -73,6 +101,7 @@
 section {
     @include padding(4em, null, 4em, null);
 }
+// LOAD CLASS FOR LOAD MORE BUTTON
 .load {
     display: none;
 }

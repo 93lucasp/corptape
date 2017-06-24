@@ -35,12 +35,14 @@ var App = function() {
             }
         },
         navBarDesktop: function() {
-            $(document).on('scroll', function() {
-                var width = $(document).width();
-                var scrollPosition = $(this).scrollTop();
-                scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
-                scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
-            });
+            if (!$('body').hasClass('article')) {
+                $(document).on('scroll', function() {
+                    var width = $(document).width();
+                    var scrollPosition = $(this).scrollTop();
+                    scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
+                    scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
+                });
+            }
         },
         navBarColor: function() {
             var width = $(document).width();

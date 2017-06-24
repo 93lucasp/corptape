@@ -27,12 +27,12 @@
         }
     }
     &--contacts {
+        @include size(100%, 100vh);
+        @include background('/assets/images/heros/contacts.jpg');
+        color: map-get($colors, white);
         .hero__box {
             @include padding(3em, 0, 3em, 0);
         }
-        @include background('/assets/images/heros/contacts.jpg');
-        @include size(100%, 100vh);
-        color: map-get($colors, white);
         &__title {
             @include padding(null, null, 1em, null);
         }

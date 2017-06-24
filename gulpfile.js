@@ -8,8 +8,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     mainBowerFiles = require('gulp-main-bower-files');
-uglify = require("gulp-uglify");
-cleanCSS = require('gulp-clean-css');
+    uglify = require("gulp-uglify");
+    cleanCSS = require('gulp-clean-css');
 
 
 // BOWER

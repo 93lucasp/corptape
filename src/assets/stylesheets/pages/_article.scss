@@ -1,0 +1,93 @@
+.article {
+    position: relative;
+    a {
+        color: map-get($colors, primary);
+    }
+    .navBar {
+        background-color: map-get($colors, primary);
+    }
+    .container {
+        &--article {
+            @include margin(8em, null, 6em, null);
+        }
+    }
+    &__title {
+        @include margin(1em, null, null, null);
+    }
+    &__image {
+        @extend .cover;
+        @include size(100%, 34em);
+    }
+    &__imageSecondary {
+        @extend .cover;
+        @include size(100%, 24em);
+        @include margin(2em, null, null, null);
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            @include size(60%, null);
+        }
+    }
+    &__text {
+        @include margin(1em, null, null, null);
+        line-height: 1.8;
+        font-size: 1.1em;
+        color: map-get($colors, gray_1);
+    }
+    &__share {
+        @extend .vertical-center;
+        .fa-share-alt-square {
+            @include margin(null, .5em, null, null);
+            color: map-get($colors, primary);
+            font-size: 2em;
+        }
+        ul {
+            @include margin(0, 0, 0, 0);
+            @include padding(null, null, null, .6em);
+            li {
+                @include size(2em, 2em);
+                @include margin(null, null, null, 1em);
+                display: inline-block;
+                position: relative;
+                border-radius: 50%;
+                background-color: map-get($colors, primary);
+                img {
+                    @include size(2em, 2em);
+                }
+            }
+        }
+    }
+    &__cit {
+        @include margin(1em, null, null, null);
+        @include padding(null, null, null, 1em);
+        color: map-get($colors, gray_1);
+        line-height: 1.6;
+        font-size: 1.4em;
+        border-left: 4px solid map-get($colors, primary);
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            @include padding(null, null, null, 3em);
+        }
+    }
+    &__author {
+        @extend .vertical-center;
+        @include margin(1em, null, null, null);
+        color: map-get($colors, gray_1);
+        &__pic {
+            @extend .cover;
+            @include size(2em, 2em);
+            @include margin(null, .5em, null, null);
+            display: inline-block;
+            border-radius: 50%;
+        }
+        &__name {
+            @include margin(0, .4em, 0, 0);
+            display: inline-block;
+        }
+        &__category {
+            @include margin(0, .4em, 0, 0);
+            display: inline-block;
+        }
+        &__date {
+            @include margin(0, 0, 0, 0);
+            display: inline-block;
+        }
+    }
+}
