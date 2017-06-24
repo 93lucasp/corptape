@@ -15,7 +15,7 @@ Corptape is a magazine about startup, tech and digital.
 
 ### How to update the template (This is a guide so that the client can easily update the template from the code)
 
-#### Article
+### Article
 
 ##### How to create a new page
 To create a new page go inside the articles folder and create a new file (nameArticle.html).
@@ -134,10 +134,10 @@ Wrape it inside the following tag:
 ```
 Change ```www.corptape.com``` with the url of the article
 
-##### Where to add images
+#### Where to add images
 All the images about an article MUST to be inside the following folder: ```/assets/images/articles```.
 
-#### List Article (blog page)
+### List Article (blog page)
 ##### How to update the list of articles
 Go to the file ```blog.html```<br>
 Find the div: ```<div class="blog__content">``` inside that find the div <br>
@@ -148,7 +148,7 @@ change (blog1) with the name of your image.<br>
 **To change the description:**<br> ```<p class="articleBox__content__description">description here </p>``` chanage the text inside that tag.<br>
 **To change the link where to go:**<br> ``` <a href="/articles/article.html" class="btn btn-primary articleBox__content__button">Leggi di più</a> ``` just change (article.html) with the name of the page.
 
-#### List Interviews (interviews page)
+### List Interviews (interviews page)
 ##### How to update the list of the interviews
 Go to the file ```interviews.html```<br>
 Find the div: ```<div class="interviews__content">``` inside that find the div <br>
