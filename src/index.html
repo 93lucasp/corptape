@@ -20,7 +20,11 @@
 		<link rel="stylesheet" type="text/css" href="/vendors/animate.css/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="/vendors/owl.carousel/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" type="text/css" href="/vendors/owl.carousel/dist/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">	</head>
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+		
+		 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		
+	</head>
 	<body class="home">
 		<div class="navBar">
 			<div class="container">
@@ -157,5 +161,16 @@
 		<script type="text/javascript" src="/vendors/owl.carousel/dist/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="/vendors/barba.js/dist/barba.min.js"></script>
 		<script type="text/javascript" src="/js/app.js"></script>
+		
+		<script>
+		    function onSubmit(data) {
+		    	if($('#name').val()!== '' && $('#email').val()!== '' && $('#message').val()!== '') {
+		    		document.getElementById("contact").submit();
+		    	}
+		        else{
+		        	alert('errors');
+		        }
+		    }
+		</script>
 	</body>
 </html>
