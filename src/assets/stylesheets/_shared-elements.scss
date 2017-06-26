@@ -52,7 +52,7 @@
         background-repeat: no-repeat;
     }
     &__content {
-        @include margin(1em, .5em, 1em, .5em);
+        @include margin(1em, .8em, 1em, .8em);
         &__title {
             @include size(null, 2.15em);
             @include margin(null, null, .8em, null);
@@ -86,15 +86,14 @@
         @include margin(1em, .5em, 1em, .5em);
         &__title {
             @include margin(null, null, .8em, null);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+             @include breakLine(2);
+             line-height: 1.4;
         }
-        &__description {
-            @include margin(1em, null, null, null);
-            @include breakLine(5);
-            color: map-get($colors, gray_1);
-        }
+        // &__description {
+        //     @include margin(1em, null, null, null);
+        //     @include breakLine(5);
+        //     color: map-get($colors, gray_1);
+        // }
     }
 }
 

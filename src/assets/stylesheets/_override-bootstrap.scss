@@ -5,7 +5,10 @@
     cursor: pointer;
     border: 0;
 }
-
+.btn-send {
+    background-color: map-get($colors, white)!important;
+    color: map-get($colors, primary)!important;
+}
 .btn-primary {
     border-radius: 10px;
     color: map-get($colors, white)!important;

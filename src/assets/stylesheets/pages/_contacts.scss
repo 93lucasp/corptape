@@ -1,0 +1,17 @@
+.contacts {
+	&__content {
+        position: relative;
+        background-color: #f4f4f4;
+        @include padding(2em, null, 4em, null);
+        
+        &__title {
+            @include margin(null, null, 1em, null);
+        }
+        .btn-primary {
+        	width: 20%;
+        	float: right;
+        	margin-top: 2em;
+        }
+        
+    }
+}

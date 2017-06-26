@@ -4,7 +4,7 @@ $field_email = $_POST['cf_email'];
 $field_message = $_POST['cf_message'];
 
 $mail_to = 'spezzanoluca@gmail.com';
-$subject = 'Message from a site visitor '.$field_name;
+$subject = 'Message from corptape.com '.$field_name;
 
 $body_message = 'From: '.$field_name."\n";
 $body_message .= 'E-mail: '.$field_email."\n";

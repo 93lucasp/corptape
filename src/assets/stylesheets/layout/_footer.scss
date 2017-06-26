@@ -4,11 +4,51 @@
     @include padding(1em, null, 1em, null);
     color: map-get($colors, white);
     background-color: map-get($colors, primary);
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
     &__copy {
         text-align: center;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            justify-content: center;
+            margin-top: 1em;
+             @include order(3);
+        }
+        @extend .vertical-center;
+    }
+    &__newsLetter {
+        text-align: center;
+        position: relative;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+           margin-top: 1em;
+             @include order(2);
+        }
+        .form-control {
+           
+            display: inline-block;
+            height: 2.5em;
+            background-color: map-get($colors, white);
+            border: 0;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            
+        }
+        .btn {
+            position:absolute;
+            right: 1em;
+            display: inline-block;
+            height: 2.5em;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            
+        }
     }
     &__social {
         text-align: center;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+           
+             @include order(1);
+        }
         ul {
             @include margin(0, 0, 0, 0);
             @include padding(0, 0, 0, 0);

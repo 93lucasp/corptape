@@ -23,6 +23,7 @@ var App = function() {
                 $(".owl-carousel").owlCarousel({
                     nav: true,
                     loop: true,
+                    autoplay:true,
                 });
 
             }
@@ -31,6 +32,7 @@ var App = function() {
                     items: 1,
                     nav: true,
                     loop: true,
+                    autoplay:true,
                 });
             }
         },

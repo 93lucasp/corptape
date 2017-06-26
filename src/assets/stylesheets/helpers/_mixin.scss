@@ -73,3 +73,7 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
+@mixin order($position) {
+    -webkit-order: $position;
+    order: $position;
+}

@@ -5,6 +5,7 @@
     @include transition(.3s ease);
     z-index: 9;
     color: map-get($colors, white);
+    font-family: 'Montserrat', sans-serif;
     &__logo {
         display: inline-block;
         float: left;

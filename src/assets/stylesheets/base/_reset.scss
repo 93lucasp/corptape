@@ -10,6 +10,17 @@ body {
     @include size(100%, 100%);
     @include padding(0, 0, 0, 0);
     @include margin(0, 0, 0, 0);
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -24,5 +35,7 @@ a {
 
 button {
     cursor: pointer;
-   
+    &:focus {
+        box-shadow: none!important;
+    }
 }

@@ -1,6 +1,6 @@
 .hero {
     @extend .vertical-center;
-    @include size(100%, 36em);
+    @include size(100%, 28em);
     &__box {
         @include size(60%, null);
         @include margin(null, auto, null, auto);
@@ -17,26 +17,25 @@
         color: map-get($colors, white);
         &__title {
             font-size: 3em;
-            font-weight: bold;
+            
         }
         &__subTitle {
-            font-weight: 600;
         }
         &__description {
-            font-weight: 600;
+          
+            font-family: 'PT Sans', sans-serif;
         }
     }
     &--contacts {
-        @include size(100%, 100vh);
         @include background('/assets/images/heros/contacts.jpg');
         color: map-get($colors, white);
-        .hero__box {
-            @include padding(3em, 0, 3em, 0);
-        }
-        &__title {
-            @include padding(null, null, 1em, null);
-        }
-        .btn-secondary {
+        text-align: center;
+        // .hero__box {
+        //     @include padding(2em, 2em, 2em, 2em);
+            // @include margin(null, null, 2em, null);
+        // }
+        
+        .btn{
             @include margin(null, 1em, null, 1em);
         }
     }

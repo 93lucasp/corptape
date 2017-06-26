@@ -16,6 +16,9 @@
 		<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" />
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|PT+Sans:400,700" rel="stylesheet">
+		
 		<link rel="stylesheet" type="text/css" href=".././vendors/components-font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="/vendors/animate.css/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="/vendors/owl.carousel/dist/assets/owl.carousel.min.css">
@@ -23,6 +26,7 @@
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
 		
 		 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		
 		
 	</head>
 	<body class="contacts">
@@ -46,38 +50,61 @@
 			</div>
 		</div>
 		
+
 		<div class="hero hero--contacts">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 hero__box offset-lg-4 text-center  animated rotateInDownLeft" >
-						<h1 class="hero--contacts__title">Contattaci</h1>
-						<a href="#" class="btn btn-secondary"><i class="fa fa-facebook" aria-hidden="true"></i>acebook </a>
-						<a href="#" class="btn btn-secondary">Email <i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-						<form id="contact" action="/contact.php" method="post">
-						    Your name<br>
-						    <input id="name" type="text" name="cf_name"><br>
-						    Your e-mail<br>
-						    <input id="email" type="text" name="cf_email"><br>
-						    Message<br>
-						    <textarea id="message" name="cf_message"></textarea><br>
-					
-						    <button 
-								class="g-recaptcha"
-								data-sitekey="6LfkxyYUAAAAAJEY_fulvESQk81aKeWhF2qN9wAk"
-								data-callback="onSubmit">
-								Submit
-							</button>
-						</form>
-					</div>
-				</div>			
+				<a href="#" class="btn btn-secondary"><i class="fa fa-facebook" aria-hidden="true"></i>acebook </a>
+				<a href="#" class="btn btn-secondary">Email <i class="fa fa-envelope-o" aria-hidden="true"></i></a>		
 			</div>
-		</div>		<footer class="footer">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 contacts__content">	
+					<h2 class="contacts__content__title">Contattaci</h2>
+					<form id="contact" action="/contact.php" method="post">
+						<div class="form-group row">
+							<div class="col-md-6">
+								<input id="name" class="form-control" type="text" name="cf_name" placeholder="Your name">
+							</div>
+							<div class="col-md-6">
+								<input id="email" class="form-control" type="email" name="cf_email" placeholder="Your email">
+							</div>
+						    
+						</div>
+						<div class="form-group row">
+							<div class="col-md-12">
+								<textarea id="message" class="form-control" rows="6" name="cf_message" placeholder="Your message"></textarea>
+							</div>
+					   	</div>
+				
+					    <!-- <input type="submit" value="Send" id="submit"> -->
+					    <button 
+							class="g-recaptcha btn btn-primary"
+							data-sitekey="6LfkxyYUAAAAAJEY_fulvESQk81aKeWhF2qN9wAk"
+							data-callback="onSubmit">
+							Invia
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 footer__copy">
+					<div class="col-lg-4 footer__copy">
 						<small>© Corptape 2017</small>
 					</div>
-					<div class="col-md-6 footer__social">
+					<div class="col-lg-4 footer__newsLetter">
+						<div class="form-group">
+						   <button class="btn btn-send cl-primary">
+						    	<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						    </button>
+						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Isciviti alla nostra newsLetter">
+						    
+						 </div>
+					</div>
+					<div class="col-lg-4 footer__social">
 						<ul>
 							<li><a href="https://www.facebook.com/Corptape/"><img src="/assets/images/social/facebook.png"></a></li>
 							<li><a href=""><img src="/assets/images/social/googleplus.png"></a></li>
