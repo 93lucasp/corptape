@@ -7,10 +7,18 @@
         &__title {
             @include margin(null, null, 1em, null);
         }
+        #name {
+           @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            margin-bottom: 1em;
+        } 
+        }
         .btn-primary {
         	width: 20%;
         	float: right;
         	margin-top: 2em;
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            width: 100%;
+        }
         }
         
     }
