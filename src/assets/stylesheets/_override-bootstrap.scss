@@ -6,8 +6,9 @@
     border: 0;
 }
 .btn-send {
-    background-color: map-get($colors, white)!important;
-    color: map-get($colors, primary)!important;
+    background-color: #2D3A46;
+            color:#fff;
+            border-radius:50px;
 }
 .btn-primary {
     border-radius: 10px;

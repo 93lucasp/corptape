@@ -1,11 +1,12 @@
 .navBar {
     @extend .vertical-center;
-    @include size(100%, 4em);
-    @include position(fixed, 0, 0, 0, null);
+    @include size(100%, 5em);
+    @include position(absolute, 0, 0, 0, null);
     @include transition(.3s ease);
     z-index: 9;
     color: map-get($colors, white);
     font-family: 'Montserrat', sans-serif;
+    background-color: rgba(255,255,255,.1);
     &__logo {
         display: inline-block;
         float: left;
@@ -20,6 +21,7 @@
         display: inline-block;
         float: right;
         ul {
+            padding-top: .5em;
             @include margin(0, 0, 0, 0);
             li {
                 @include margin(null, null, null, 2em);

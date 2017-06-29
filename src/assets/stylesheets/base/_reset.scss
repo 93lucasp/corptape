@@ -10,7 +10,7 @@ body {
     @include size(100%, 100%);
     @include padding(0, 0, 0, 0);
     @include margin(0, 0, 0, 0);
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1,
@@ -20,7 +20,7 @@ h4,
 h5,
 h6,
 label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {

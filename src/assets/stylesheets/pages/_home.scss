@@ -6,14 +6,28 @@
             @include margin(null, null, 1em, null);
         }
         &__title {
-            @include padding(null, null, 1.4em, null);
-            
+            @include margin(null, null, 1em, null);
+        }
+        &__articles {
+            a {
+                color: inherit;
+            }
         }
         &__interviews {
             text-align: center;
+            margin-top: -10.5em;
             .owl-carousel {
                 @include size(94%, null);
                 @include margin(null, auto, null, auto);
+            }
+            .owl-item {
+
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                
+                background-color: rgba(255, 255, 255, .2);
+                box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01),
+                0 62px 52px 0 rgba(0, 0, 0, 0.04);
             }
             .owlNavigation {
                 @include position(absolute, null, null, null, null);
@@ -23,7 +37,7 @@
                 &:after {
                     font-family: fontAwesome;
                     font-size: 1.8em;
-                    color: map-get($colors, primary);
+                    color: #fff;
                 }
             }
             .owl-prev {
@@ -42,10 +56,12 @@
             }
         }
         &__cta {
-            text-align: center;
+            padding-top: 2em;
+            padding-right: 5em;
+            padding-left: 2em;
             position: relative;
             color: map-get($colors, white);
-            background-color: map-get($colors, secondary);
+            @include background('/assets/images/cta.png');
             .btn {
                 width: 30%;
             }

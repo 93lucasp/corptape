@@ -3,53 +3,91 @@
     @include size(100%, null);
     @include padding(1em, null, 1em, null);
     color: map-get($colors, white);
-    background-color: map-get($colors, primary);
+    background-color: #EC011E;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    &__copy {
-        text-align: center;
-        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-            justify-content: center;
-            margin-top: 1em;
-            @include order(3);
+    hr {
+        background-color: #fff;
+    }
+    &__logo {
+      
+    
+        img {
+            width: 10em;
         }
-        @extend .vertical-center;
+        p {
+            margin:0;
+        }
+        a {
+            color: map-get($colors, white);
+            text-decoration: underline!important;
+        }
+        // text-align: center;
+        // @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        //     justify-content: center;
+        //     margin-top: 1em;
+        //     @include order(3);
+        // }
+        // @extend .vertical-center;
     }
     &__newsLetter {
         text-align: center;
         position: relative;
         @media screen and (max-width: map-get($grid-breakpoints, lg)) {
             margin-top: 1em;
-            @include order(2);
+            
         }
         .form-group {
-            margin:0;
+            margin: 0;
         }
         .form-control {
+            float: right;
             display: inline-block;
             height: 2.5em;
             background-color: map-get($colors, white);
             border: 0;
             border-bottom-right-radius: 0;
             border-top-right-radius: 0;
+            border-radius: 50px;
         }
         .btn {
             position: absolute;
-            right: 1em;
+            right: 0;
+            top: 0;
             display: inline-block;
             height: 2.5em;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
         }
     }
-    &__social {
-        text-align: center;
-        @extend .vertical-center;
-        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    &__menu {
+        text-align: right;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+           display: none;
             
-            justify-content: flex-end;
         }
+        li {
+            display: inline-block;
+            margin-left: 1em;
+            font-size: .8em;
+            a {
+                color: map-get($colors, white);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__copy {
+    }
+    &__social {
+        @extend .vertical-center;
+        justify-content: flex-start;
+        margin-bottom: .6em;
+        // text-align: center;
+        // @extend .vertical-center;
+        // @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+        //     justify-content: flex-end;
+        // }
         @media screen and (max-width: map-get($grid-breakpoints, lg)) {
             @include order(1);
             justify-content: center;
@@ -60,7 +98,7 @@
         }
         li {
             @include size(2em, 2em);
-            @include margin(null, null, null, 1em);
+            @include margin(null, 1em, null, null);
             display: inline-block;
             position: relative;
             border-radius: 50%;

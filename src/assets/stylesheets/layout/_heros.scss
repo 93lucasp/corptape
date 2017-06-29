@@ -1,20 +1,22 @@
 .hero {
     @extend .vertical-center;
-    @include size(100%, 28em);
-    &__box {
-        @include size(60%, null);
-        @include margin(null, auto, null, auto);
-        @include padding(2em, 0, 2em, 0);
-        border-radius: 5px;
-        background-color: map-get($colors, black_transparence);
-        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-            @include size(100%, null);
-        }
-    }
+    @include size(100%, 32em);
+    // &__box {
+    //     @include size(60%, null);
+    //     @include margin(null, auto, null, auto);
+    //     @include padding(2em, 0, 2em, 0);
+    //     border-radius: 5px;
+    //     background-color: map-get($colors, black_transparence);
+    //     @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+    //         @include size(100%, null);
+    //     }
+    // }
     &--home {
         @include background('/assets/images/heros/home.jpg');
-        text-align: center;
         color: map-get($colors, white);
+        a {
+            color: map-get($colors, white);
+        }
         &__title {
             font-size: 3em;
             

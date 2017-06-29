@@ -36,22 +36,22 @@ var App = function() {
                 });
             }
         },
-        navBarDesktop: function() {
-            if (!$('body').hasClass('article')) {
-                $(document).on('scroll', function() {
-                    var width = $(document).width();
-                    var scrollPosition = $(this).scrollTop();
-                    scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
-                    scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
-                });
-            }
-        },
-        navBarColor: function() {
-            var width = $(document).width();
-            if (width > 992) {
-                this.navBarDesktop();
-            }
-        },
+        // navBarDesktop: function() {
+        //     if (!$('body').hasClass('article')) {
+        //         $(document).on('scroll', function() {
+        //             var width = $(document).width();
+        //             var scrollPosition = $(this).scrollTop();
+        //             scrollPosition > 10 ? $('.navBar').css({ "background-color": "#F02932" }) : $('.navBar').css({ "background-color": "transparent" });
+        //             scrollPosition > 10 ? $('.navBar-social').css({ "background-color": "#fff" }) : $('.navBar-social').css({ "background-color": "rgba(255,255,255,.8)" });
+        //         });
+        //     }
+        // },
+        // navBarColor: function() {
+        //     var width = $(document).width();
+        //     if (width > 992) {
+        //         this.navBarDesktop();
+        //     }
+        // },
         toggleClass: function(classToToggle) {
             $(classToToggle).slideToggle();
         },
