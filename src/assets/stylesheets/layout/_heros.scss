@@ -11,25 +11,32 @@
     //         @include size(100%, null);
     //     }
     // }
+    &__title {
+            font-size: 3em;
+            font-weight: 500;
+            
+        }
+        &__subTitle {
+            font-weight: 300;
+        }
+        &__description {
+           font-weight: 300;
+            
+        }
     &--home {
         @include background('/assets/images/heros/home.jpg');
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        @include size(100%, 35em);
+        }
         color: map-get($colors, white);
         a {
             color: map-get($colors, white);
         }
-        &__title {
-            font-size: 3em;
-            
-        }
-        &__subTitle {
-        }
-        &__description {
-          
-            font-family: 'PT Sans', sans-serif;
-        }
+        
     }
     &--contacts {
         @include background('/assets/images/heros/contacts.jpg');
+        @include size(100%, 43em);
         color: map-get($colors, white);
         text-align: center;
         // .hero__box {
@@ -44,9 +51,20 @@
     &--interviews {
         @include background('/assets/images/heros/interviews.jpg');
         color: map-get($colors, white);
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        @include size(null, 38em);
+        }
+        &__description {
+            margin-bottom: 2em;
+        }
+        &__video {
+            background-color: rgba(255,255,255,.2);
+             padding: 1.5em;
+        }
     }
     &--blog {
         @include background('/assets/images/heros/blog.jpg');
         color: map-get($colors, white);
+
     }
 }

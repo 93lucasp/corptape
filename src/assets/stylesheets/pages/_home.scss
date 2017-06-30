@@ -6,7 +6,12 @@
             @include margin(null, null, 1em, null);
         }
         &__title {
-            @include margin(null, null, 1em, null);
+            @include margin(null, null, 1.6em, null);
+            font-weight: 500;
+        }
+        &__subTitle {
+            @include margin(null, null, 1.6em, null);
+            font-weight: 300;
         }
         &__articles {
             a {
@@ -15,6 +20,7 @@
         }
         &__interviews {
             text-align: center;
+            padding-top:2em;
             margin-top: -10.5em;
             .owl-carousel {
                 @include size(94%, null);
@@ -55,17 +61,7 @@
                 }
             }
         }
-        &__cta {
-            padding-top: 2em;
-            padding-right: 5em;
-            padding-left: 2em;
-            position: relative;
-            color: map-get($colors, white);
-            @include background('/assets/images/cta.png');
-            .btn {
-                width: 30%;
-            }
-        }
+        
     }
     @media screen and (min-width: map-get($grid-breakpoints, lg)) {
         .embed-responsive {

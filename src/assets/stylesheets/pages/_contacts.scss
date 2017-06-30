@@ -1,25 +1,31 @@
 .contacts {
-	&__content {
+    &__content {
         position: relative;
-        background-color: #f4f4f4;
-        @include padding(2em, null, 4em, null);
-        
+        background-color: rgba(45, 58, 70, .8);
+        @include padding(2em, 4em, 4em, 4em);
+        margin-top: 2em;
+        border-radius: 3px;
+        input {
+            border-radius: 50px;
+        }
         &__title {
             @include margin(null, null, 1em, null);
+            .underline {
+                padding-bottom: .2em;
+                border-color: #fff;
+            }
         }
         #name {
-           @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-            margin-bottom: 1em;
-        } 
-        }
-        .btn-primary {
-        	width: 20%;
-        	float: right;
-        	margin-top: 2em;
             @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-            width: 100%;
+                margin-bottom: 1em;
+            }
         }
+        .btn-send {
+            width: 20%;
+            margin-top: 1em;
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                width: 100%;
+            }
         }
-        
     }
 }

@@ -118,13 +118,13 @@
             display: inline-block;
             float: none;
             display: none;
-            background-color: map-get($colors, secondary);
+            background-color: #A31013;
             ul {
                 @include margin(0, 0, 0, 0);
                 @include padding(0, 0, 0, 0);
                 li {
                     display: block;
-                    @include padding(1em, 1em, 1em, 1em);
+                    @include padding(1.2em, 1em, 1.2em, 1em);
                     @include margin(0, 0, 0, 0);
                     border-bottom: 1px solid map-get($colors, white);
                     &:after {

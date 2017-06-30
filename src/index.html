@@ -54,10 +54,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<h1 class="hero--home__title">Corptape</h1>
-						<h3 class="hero--home__subTitle">Rivista startup, teach e digital</h3>
-						<h6 class="hero--home__description">Raccontiamo le storie di startup e aziende<br> attraverso video-interviste dedicate</h6>
-						<a href=""><img src="/assets/images/icons/subscribe.png" class="icon-subscribe"> Iscriviti ora </a>
+						<h1 class="hero__title">Corptape</h1>
+						<h3 class="hero__subTitle">Rivista startup, teach e digital</h3>
+						<p class="hero__description">Raccontiamo le storie di startup e aziende<br> attraverso video-interviste dedicate</p>
+						<a href="#" data-toggle="modal" data-target="#newsLetter"><img src="/assets/images/icons/subscribe.png" class="icon-subscribe"> Iscriviti ora </a>
 					</div>
 				</div>
 			</div>
@@ -154,18 +154,19 @@
 							</a>
 						</div>
 					</div>
+					<a href="/interviews.html" class="btn btn-primary m-t-2">Guarda tuttle le interviste</a>
 				</div>
 			</section>
 		
-			<section class="container home__content__cta">
-			<div class="row">
-				<div class="col-lg-4 offset-lg-2">
-					<h3 class="home__content__cta__title">Ciao sono il titolo ciao e doraj?</h3>
+			<section class="container cta">
+				<div class="row">
+					<div class="col-lg-4 offset-lg-2">
+						<h3 class="cta__title">Ciao sono il titolo ciao e doraj?</h3>
+					</div>
+					<div class="col-lg-6">
+						<p class="cta__subTitle">Ciao sono il sottotitolo e sono un pò più lungo vediCiao sono il sottotitolo e sono un pò più lungo vedi?Ciao sono il sottotitolo e sono un pò più lungo vedi??</p>
+					</div>
 				</div>
-				<div class="col-lg-6">
-					<p class="home__content__cta__subTitle">Ciao sono il sottotitolo e sono un pò più lungo vediCiao sono il sottotitolo e sono un pò più lungo vedi?Ciao sono il sottotitolo e sono un pò più lungo vedi??</p>
-				</div>
-			</div>
 				
 			</section>
 		
@@ -176,11 +177,11 @@
 							<div class="pic"></div>
 						</div>
 						<div class="col-lg-6">
-							<h2 class="title">Da una delle nostre interviste</h2>
+							<h3 class="title">Da una delle nostre interviste</h3>
 							<div class="text">
-								<p>"Un coworking è un luogo dove tamte persone con personalità differenti condividono uno spazio, ma non solo, condividono opportunità di lavoro, passioni, momenti di condivisioni. che possono essere anche solo legati alla vita personale o professionale"
+								<p>" Un coworking è un luogo dove tamte persone con personalità differenti condividono uno spazio, ma non solo, condividono opportunità di lavoro, passioni, momenti di condivisioni. che possono essere anche solo legati alla vita personale o professionale "
 								</p>
-								<p class="float-right">-Fabio Sferruzzi</p>
+								<p class="float-right bold">-Fabio Sferruzzi</p>
 							</div>
 						</div>
 					</div>
@@ -235,7 +236,27 @@
 					</div>
 				</div>
 			</div>
-		</footer>		<script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
+		</footer>		<!-- Modal -->
+		<div class="modal fade" id="newsLetter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="exampleModalLabel">Iscriviti alla nostra newsletter</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p>Riceverai periodicamente contenuti che ti terranno aggiornato sul mondo delle startup</p>
+		        <div class="form-group">
+		          <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter email">
+		          <button type="button" class="btn btn-secondary">Iscriviti ora</button>
+		        </div>
+		      </div>
+		     
+		    </div>
+		  </div>
+		</div>		<script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="/vendors/jquery-ui/jquery-ui.js"></script>
 		<script type="text/javascript" src="/vendors/tether/dist/js/tether.min.js"></script>
 		<script type="text/javascript" src="/vendors/wow/dist/wow.min.js"></script>
@@ -245,10 +266,10 @@
 		<script type="text/javascript" src="/js/app.js"></script>
 		<script type="text/javascript" id="cookieinfo"
 			src="/js/cookiesinfo.min.js"
-			data-bg="#f24049"
+			data-bg="#A31013"
 			data-fg="#FFFFFF"
 			data-link="#dddddd"
-			data-moreinfo="www.lucaspezzano.com"
+			data-moreinfo="www.corptape.com/cookies-policy.html"
 			data-divlink="#F02932"
 			data-divlinkbg="#fff"
 			data-linkmsg="leggi di più"

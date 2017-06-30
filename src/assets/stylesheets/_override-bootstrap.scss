@@ -1,9 +1,14 @@
 .btn-secondary {
     border-radius: 50px;
-    color: map-get($colors, primary)!important;
-    background-color: map-get($colors, white);
+    background-color: map-get($colors, primary)!important;
+        color: #fff!important;
+    border: 1px solid map-get($colors, primary)!important;
     cursor: pointer;
     border: 0;
+    &:hover {
+        background-color: map-get($colors, primary)!important;
+        color: #fff!important;
+    }
 }
 .btn-send {
     background-color: #2D3A46;
@@ -11,13 +16,15 @@
             border-radius:50px;
 }
 .btn-primary {
-    border-radius: 10px;
-    color: map-get($colors, white)!important;
-    background-color: #f35860;
+    border-radius: 50px;
+    color: map-get($colors, primary)!important;
+    border: 1px solid map-get($colors, primary)!important;
+    background-color: #fff!important;
     cursor: pointer;
     border: 0;
     &:hover {
-    	background-color: map-get($colors, primary);
+    	background-color: map-get($colors, primary)!important;
+        color: #fff!important;
     }
 }
 

@@ -1,0 +1,50 @@
+#newsLetter {
+    background-color: rgba(45, 58, 70, .8);
+    .modal-content {
+        padding: 1em 3em;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            padding: 1em;
+        }
+        background-color: #2D3A46!important;
+        color: #fff;
+    }
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+    .modal-header {
+        .close {
+            position: absolute;
+            top: .2em;
+            right: .2em;
+            border: 1px solid map-get($colors, white);
+            outline: none;
+            border-radius: 50%;
+            width: 1.2em;
+            height: 1.2em;
+            color: map-get($colors, white);
+            span {
+                position: absolute;
+                top: 0;
+                left: .25em;
+            }
+        }
+    }
+    .modal-body {
+        .form-group {
+            position: relative;
+            margin-top: 2em;
+            .form-control {
+                border-radius: 50px;
+                &:focus {
+                    border-color: map-get($colors, gray_2);
+                }
+            }
+            .btn-secondary {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}

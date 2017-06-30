@@ -1,9 +1,22 @@
 .icon-subscribe {
     width: 1.5em;
     margin-right: .5em;
-    margin-top: .1em;
+    margin-top: -.1em;
 }
-
+.cta {
+            @extend .vertical-center;
+            padding-top: 2em;
+            padding-right: 5em;
+            padding-left: 2em;
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            height: 15em;}
+            position: relative;
+            color: map-get($colors, white);
+            @include background('/assets/images/cta.png');
+            .btn {
+                width: 30%;
+            }
+        }
 .full-bg {
     @include background('/assets/images/cit.jpg');
     margin-top: 6em;
@@ -27,14 +40,15 @@
     }
     .text {
         width: 30em;
-        height: 20em;
+        
         @media screen and (min-width: map-get($grid-breakpoints, lg)) {
             margin-left: -5em;
+            height: 20em;
         }
         @media screen and (max-width: map-get($grid-breakpoints, lg)) {
             width: 100%;
         }
-        padding: 2.6em;
+        padding: 3em;
         line-height: 1.6;
         /* box: */
         background: #FFFFFF;
@@ -49,7 +63,7 @@
     }
     .title {
         color: #fff;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
         @media screen and (max-width: map-get($grid-breakpoints, lg)) {
             margin-top: 1em;
             width: 100%;
@@ -205,11 +219,13 @@
 .articleBox {
     @include transition(ease .1s);
     @include margin(null, null, 6em, null);
-    border: 1px solid map-get($colors, gray);
     border-radius: 5px;
+     background: #FFFFFF;
+        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01),
+        0 62px 52px 0 rgba(0, 0, 0, 0.04);
     &:hover {
         @include transform(translate(0, -8px));
-        box-shadow: 0 5px 16px -8px grey;
+        
     }
     &__header {
         @include size(100%, 14em);
@@ -218,16 +234,18 @@
         background-repeat: no-repeat;
     }
     &__content {
-        @include margin(1em, .8em, 1em, .8em);
+        @include margin(1em, 1.6em, 1em, 1.6em);
+        padding-bottom:2em;
         &__title {
             @include size(null, 2.15em);
-            @include margin(null, null, .8em, null);
+            @include margin(.8em, null, .8em, null);
             @include breakLine(2);
         }
         &__description {
             @include margin(1em, null, null, null);
             @include breakLine(5);
             color: map-get($colors, gray_1);
+
         }
         &__button {
             @include size(100%, null);
@@ -239,21 +257,36 @@
 .videoBox {
     @include transition(ease .1s);
     @include margin(null, null, 6em, null);
-    border: 1px solid map-get($colors, gray);
-    border-radius: 5px;
+    border: 1px solid #ededed!important;
     &:hover {
-        @include transform(translate(0, -8px));
-        box-shadow: 0 5px 16px -8px map-get($colors, gray_3);
+        @include transform(translate(0, -2px));
+         background: #FFFFFF;
+        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01),
+        0 62px 52px 0 rgba(0, 0, 0, 0.04);
+        border:0;
     }
     &__header {
         @include size(100%, 14em);
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+             @include size(100%, 12em);
+            
+        }
     }
     &__content {
-        @include margin(1em, .5em, 1em, .5em);
+        @include margin(1em, 1.2em, null, 1.2em);
+        padding-bottom: 2em;
         &__title {
             @include margin(null, null, .8em, null);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+             color: map-get($colors, primary);
+
+        }
+        &__subTitle {
             @include breakLine(2);
-            line-height: 1.4;
+            color: map-get($colors, gray_1);
         }
         // &__description {
         //     @include margin(1em, null, null, null);

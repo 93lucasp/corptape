@@ -5,14 +5,9 @@
         &__title {
             @include padding(null, null, 1.4em, null);
         }
-        &__cta {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            color: map-get($colors, white);
-            background-color: map-get($colors, gray_2);;
-            
-        }
+        
     }
-   
+    .cta {
+            margin-bottom: 2em;
+        }
 }

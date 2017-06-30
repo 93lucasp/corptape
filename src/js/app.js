@@ -3,10 +3,8 @@ var App = function() {
     return {
 
         init: function() {
-            // Barba.Pjax.start();
             new WOW().init();
             this.carousel();
-            this.navBarColor();
             this.loadMore();
         },
         loadMore: function() {

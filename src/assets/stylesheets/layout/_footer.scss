@@ -1,7 +1,7 @@
 .footer {
     @extend .vertical-center;
     @include size(100%, null);
-    @include padding(1em, null, 1em, null);
+    @include padding(2em, null, 1em, null);
     color: map-get($colors, white);
     background-color: #EC011E;
     display: -webkit-flex;
