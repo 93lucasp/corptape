@@ -5,11 +5,10 @@
     @include transition(.3s ease);
     z-index: 9;
     color: map-get($colors, white);
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgba(255,255,255,.1);
+    background-color: rgba(255, 255, 255, .1);
     &__logo {
-        display: inline-block;
         float: left;
+        display: inline-block;
         h3 {
             @include margin(0, 0, 0, 0);
             a {
@@ -18,10 +17,10 @@
         }
     }
     &__menu {
-        display: inline-block;
         float: right;
+        display: inline-block;
         ul {
-            padding-top: .5em;
+            @include padding(.5em, null, null, null);
             @include margin(0, 0, 0, 0);
             li {
                 @include margin(null, null, null, 2em);
@@ -114,18 +113,18 @@
         }
         &__menu {
             @include size(100%, 100vh);
-            @include position(fixed, 4em, 0, 0, null);
+            @include position(fixed, 4.6em, 0, 0, null);
             display: inline-block;
             float: none;
             display: none;
-            background-color: #A31013;
+            background-color: map-get($colors, secondary);
             ul {
                 @include margin(0, 0, 0, 0);
                 @include padding(0, 0, 0, 0);
                 li {
-                    display: block;
                     @include padding(1.2em, 1em, 1.2em, 1em);
                     @include margin(0, 0, 0, 0);
+                    display: block;
                     border-bottom: 1px solid map-get($colors, white);
                     &:after {
                         content: '\f054';

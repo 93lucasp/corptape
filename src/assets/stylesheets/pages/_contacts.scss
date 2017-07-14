@@ -1,9 +1,9 @@
 .contacts {
     &__content {
-        position: relative;
-        background-color: rgba(45, 58, 70, .8);
         @include padding(2em, 4em, 4em, 4em);
-        margin-top: 2em;
+        @include margin(2em, null, null, null);
+        position: relative;
+        background-color: map-get($colors, blue_trasparence);
         border-radius: 3px;
         input {
             border-radius: 50px;
@@ -11,20 +11,19 @@
         &__title {
             @include margin(null, null, 1em, null);
             .underline {
-                padding-bottom: .2em;
-                border-color: #fff;
+                border-color: map-get($colors, white);
             }
         }
         #name {
             @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-                margin-bottom: 1em;
+                @include margin(null, null, 1em, null);
             }
         }
         .btn-send {
-            width: 20%;
-            margin-top: 1em;
+            @include size(20%, null);
+            @include margin(1em, null, null, 0);
             @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-                width: 100%;
+                @include size(100%, null);
             }
         }
     }

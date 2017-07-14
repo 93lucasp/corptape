@@ -23,13 +23,7 @@
             color: map-get($colors, white);
             text-decoration: underline!important;
         }
-        // text-align: center;
-        // @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-        //     justify-content: center;
-        //     margin-top: 1em;
-        //     @include order(3);
-        // }
-        // @extend .vertical-center;
+        
     }
     &__newsLetter {
         text-align: center;
@@ -43,6 +37,7 @@
         }
         .form-control {
             float: right;
+            width: 100%;
             display: inline-block;
             height: 2.5em;
             background-color: map-get($colors, white);
@@ -53,7 +48,7 @@
         }
         .btn {
             position: absolute;
-            right: 0;
+            right: .8em;
             top: 0;
             display: inline-block;
             height: 2.5em;
@@ -79,53 +74,7 @@
     }
     &__copy {
     }
-    &__social {
-        @extend .vertical-center;
-        justify-content: flex-start;
-        margin-bottom: .6em;
-        // text-align: center;
-        // @extend .vertical-center;
-        // @media screen and (min-width: map-get($grid-breakpoints, lg)) {
-        //     justify-content: flex-end;
-        // }
-        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-            @include order(1);
-            justify-content: center;
-        }
-        ul {
-            @include margin(0, 0, 0, 0);
-            @include padding(0, 0, 0, 0);
-        }
-        li {
-            @include size(2em, 2em);
-            @include margin(null, 1em, null, null);
-            display: inline-block;
-            position: relative;
-            border-radius: 50%;
-            &:after,
-            &:before {
-                @include position(absolute, 0, 0, 0, 0);
-                @include transition(.3s all);
-                content: "";
-                display: block;
-                border-radius: 50%;
-                border: 1px solid map-get($colors, white);
-                background-color: transparent;
-            }
-            &:hover {
-                &:after {
-                    @include transform(scale(1.5));
-                }
-                &:before {
-                    @include transform(scale(2));
-                    opacity: 0;
-                }
-            }
-            img {
-                @include size(2em, null);
-            }
-        }
-    }
+    
 }
 
 @media screen and (min-width: map-get($grid-breakpoints, lg)) {

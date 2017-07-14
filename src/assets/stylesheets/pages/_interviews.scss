@@ -5,9 +5,8 @@
         &__title {
             @include padding(null, null, 1.4em, null);
         }
-        
     }
     .cta {
-            margin-bottom: 2em;
-        }
+        @include margin(null, null, 2em, null);
+    }
 }

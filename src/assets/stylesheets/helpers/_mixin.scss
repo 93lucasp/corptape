@@ -77,3 +77,11 @@
     -webkit-order: $position;
     order: $position;
 }
+
+@mixin gradient-left-right($color-left, $color-right) {
+    background: $color-left;
+    background: -webkit-linear-gradient(left, $color-left, $color-right);
+    background: -o-linear-gradient(right, $color-left, $color-right);
+    background: -moz-linear-gradient(right, $color-left, $color-right);
+    background: linear-gradient(to right, $color-left, $color-right);
+}

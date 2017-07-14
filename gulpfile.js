@@ -1,18 +1,18 @@
-// REQUIRE PACKAGE
-var gulp = require('gulp'),
-    connect = require('gulp-connect'),
-    handlebars = require('gulp-compile-handlebars'),
-    rename = require('gulp-rename'),
-    gulpPath = require('gulp-path'),
-    sourcemaps = require("gulp-sourcemaps"),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    mainBowerFiles = require('gulp-main-bower-files');
-    uglify = require("gulp-uglify");
-    cleanCSS = require('gulp-clean-css');
+// PACKAGES
+var gulp            =  require('gulp'),
+    connect         = require('gulp-connect'),
+    handlebars      = require('gulp-compile-handlebars'),
+    rename          = require('gulp-rename'),
+    gulpPath        = require('gulp-path'),
+    sourcemaps      = require("gulp-sourcemaps"),
+    concat          = require('gulp-concat'),
+    sass            = require('gulp-sass'),
+    mainBowerFiles  = require('gulp-main-bower-files'),
+    uglify          = require("gulp-uglify"),
+    cleanCSS        = require('gulp-clean-css');
 
 
-// BOWER
+// BOWER MAIN FILES
 gulp.task('main-bower-files', function() {
     return gulp.src('./bower.json')
         .pipe(mainBowerFiles())
@@ -24,13 +24,10 @@ gulp.task('main-bower-files', function() {
 gulp.task('sass', function() {
     gulp.src('./src/assets/stylesheets/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/stylesheets'));
-    return gulp.src('./src/assets/stylesheets/main.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/assets/stylesheets'))
-        .pipe(connect.reload());
-
+        .pipe(gulp.dest('./src/assets/stylesheets'))
+        .pipe(gulp.dest('./public/assets/stylesheets'));
 });
+
 gulp.task('sass:watch', function() {
     gulp.watch('./src/assets/stylesheets/**/*.scss', ['sass']);
 });
@@ -49,6 +46,8 @@ gulp.task('hbs', function() {
         .pipe(gulp.dest('src'))
         .pipe(gulp.dest('public'))
         .pipe(connect.reload());
+        
+        
 });
 gulp.task('hbs:watch', ['hbs'], function() {
     gulp.watch('src/view/**/*.hbs', ['hbs']);
@@ -72,36 +71,32 @@ gulp.task('vendors', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('php', function() {
+    return gulp.src('src/*.php')
+        .pipe(gulp.dest('public/'));
+});
+
+// MINIFY JS
 gulp.task('minify-js', function() {
     gulp.src('src/js/app.js') // path to your files
         .pipe(uglify())
         .pipe(rename(function(path) {
             path.extname = ".min.js";
         }))
-        .pipe(gulp.dest('src/js'));
-    return gulp.src('src/js/app.js') // path to your files
-        .pipe(uglify())
-        .pipe(rename(function(path) {
-            path.extname = ".min.js";
-        }))
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('src/js'))
+        .pipe(gulp.dest('public/js'));   
 });
 
+// MINIFY CSS
 gulp.task('minify-css', function() {
     gulp.src('./src/assets/stylesheets/main.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename(function(path) {
             path.extname = ".min.css";
         }))
-        .pipe(gulp.dest('./src/assets/stylesheets'));
-    return gulp.src('./src/assets/stylesheets/main.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename(function(path) {
-            path.extname = ".min.css";
-        }))
+        .pipe(gulp.dest('./src/assets/stylesheets'))
         .pipe(gulp.dest('./public/assets/stylesheets'));
 });
-
 
 
 // CONNECTION SERVER
@@ -115,4 +110,4 @@ gulp.task('connect', function() {
 });
 
 // TASKS TO RUN
-gulp.task('default', ['hbs:watch', 'sass', 'sass:watch', 'img', 'js', 'minify-js', 'minify-css', 'vendors', 'main-bower-files', 'connect']);
+gulp.task('default', ['sass', 'sass:watch', 'hbs', 'hbs:watch', 'img', 'js', 'php', 'minify-js', 'minify-css', 'vendors', 'main-bower-files', 'connect']);

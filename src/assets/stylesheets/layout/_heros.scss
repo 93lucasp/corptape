@@ -1,70 +1,58 @@
 .hero {
     @extend .vertical-center;
     @include size(100%, 32em);
-    // &__box {
-    //     @include size(60%, null);
-    //     @include margin(null, auto, null, auto);
-    //     @include padding(2em, 0, 2em, 0);
-    //     border-radius: 5px;
-    //     background-color: map-get($colors, black_transparence);
-    //     @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-    //         @include size(100%, null);
-    //     }
-    // }
     &__title {
-            font-size: 3em;
-            font-weight: 500;
-            
-        }
-        &__subTitle {
-            font-weight: 300;
-        }
-        &__description {
-           font-weight: 300;
-            
-        }
+        font-size: 3em;
+        font-weight: 500;
+    }
+    &__subTitle {
+        font-weight: 300;
+    }
+    &__description {
+        font-weight: 300;
+    }
     &--home {
-        @include background('/assets/images/heros/home.jpg');
-        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-        @include size(100%, 35em);
-        }
+        @include background('../images/heros/home.jpg');
         color: map-get($colors, white);
         a {
             color: map-get($colors, white);
         }
-        
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            @include size(100%, 35em);
+        }
     }
     &--contacts {
-        @include background('/assets/images/heros/contacts.jpg');
+        @include background('../images/heros/contacts.jpg');
         @include size(100%, 43em);
         color: map-get($colors, white);
         text-align: center;
-        // .hero__box {
-        //     @include padding(2em, 2em, 2em, 2em);
-            // @include margin(null, null, 2em, null);
-        // }
-        
-        .btn{
+        .btn {
             @include margin(null, 1em, null, 1em);
+        }
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            @include size(100%, 86%);
         }
     }
     &--interviews {
-        @include background('/assets/images/heros/interviews.jpg');
+        @include background('../images/heros/interviews.jpg');
         color: map-get($colors, white);
-        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-        @include size(null, 38em);
-        }
         &__description {
-            margin-bottom: 2em;
+            @include margin(null, null, 2em, null);
         }
         &__video {
-            background-color: rgba(255,255,255,.2);
-             padding: 1.5em;
+            @include padding(1.5em, 1.5em, 1.5em, 1.5em);
+            background-color: rgba(255, 255, 255, .2);
+        }
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            @include padding(4em, null, null, null);
+        }
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            @include size(null, 38em);
         }
     }
     &--blog {
-        @include background('/assets/images/heros/blog.jpg');
+        @include background('../images/heros/blog.jpg');
+        position: relative;
         color: map-get($colors, white);
-
     }
 }

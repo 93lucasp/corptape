@@ -8,7 +8,7 @@
     }
     .container {
         &--article {
-            @include margin(8em, null, 6em, null);
+            @include padding(8em, null, 6em, null);
         }
     }
     &__title {
@@ -17,6 +17,9 @@
     &__image {
         @extend .cover;
         @include size(100%, 34em);
+    }
+    img {
+        max-width: 100%;
     }
     &__imageSecondary {
         @extend .cover;
@@ -34,6 +37,7 @@
     }
     &__share {
         @extend .vertical-center;
+        @include margin(3em, null, null, null);
         .fa-share-alt-square {
             @include margin(null, .5em, null, null);
             color: map-get($colors, primary);
@@ -80,14 +84,23 @@
         &__name {
             @include margin(0, .4em, 0, 0);
             display: inline-block;
+            @media screen and (max-width: 357px) {
+                font-size: .8em;
+            }
         }
         &__category {
             @include margin(0, .4em, 0, 0);
             display: inline-block;
+            @media screen and (max-width: 357px) {
+                font-size: .8em;
+            }
         }
         &__date {
             @include margin(0, 0, 0, 0);
             display: inline-block;
+            @media screen and (max-width: 357px) {
+                font-size: .8em;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ $field_name = $_POST['cf_name'];
 $field_email = $_POST['cf_email'];
 $field_message = $_POST['cf_message'];
 
-$mail_to = 'spezzanoluca@gmail.com';
+$mail_to = 'mogavero.daniele@gmail.com';
 $subject = 'Message from corptape.com '.$field_name;
 
 $body_message = 'From: '.$field_name."\n";
@@ -24,7 +24,7 @@ if ($mail_status) { ?>
 }
 else { ?>
     <script language="javascript" type="text/javascript">
-        alert('Non è stato possibile inviare il messaggio, ti preghiamo di mandare un email a gordon@template-help.com');
+        alert('Non è stato possibile inviare il messaggio, ti preghiamo di mandare un email a info@corptape.com');
         window.location = 'contacts.html';
     </script>
 <?php

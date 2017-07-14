@@ -4,6 +4,9 @@
         position: relative;
         .articleBox {
             @include margin(null, null, 1em, null);
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                @include margin(null, null, 4em, null);
+            }
         }
         &__title {
             @include margin(null, null, 1.6em, null);
@@ -19,21 +22,17 @@
             }
         }
         &__interviews {
+            @include padding(2em, null, null, null);
+            @include margin(-10em, null, null, null);
             text-align: center;
-            padding-top:2em;
-            margin-top: -10.5em;
             .owl-carousel {
                 @include size(94%, null);
                 @include margin(null, auto, null, auto);
             }
             .owl-item {
-
-                    padding-top: 1em;
-                    padding-bottom: 1em;
-                
-                background-color: rgba(255, 255, 255, .2);
-                box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01),
-                0 62px 52px 0 rgba(0, 0, 0, 0.04);
+                @include padding(1em, null, 1em, null) 
+                background-color: map-get($colors, white_transparence_1);
+                box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01), 0 62px 52px 0 rgba(0, 0, 0, 0.04);
             }
             .owlNavigation {
                 @include position(absolute, null, null, null, null);
@@ -43,7 +42,7 @@
                 &:after {
                     font-family: fontAwesome;
                     font-size: 1.8em;
-                    color: #fff;
+                    color: map-get($colors, white);
                 }
             }
             .owl-prev {
@@ -61,7 +60,45 @@
                 }
             }
         }
-        
+        &__cit {
+            @include background('../images/cit.jpg');
+            @include margin(6em, null, 6em, null);
+            position: relative;
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                @include size(null, 26em);
+            }
+            &__pic {
+                @include size(30em, 20em);
+                @include background('../images/sferruzzi.png');
+                float: right;
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    @include size(100%, null);
+                }
+            }
+            &__text {
+                @include size(30em, null);
+                @include padding(3em, 3em, 3em, 3em);
+                line-height: 1.6;
+                box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.01), 0 62px 52px 0 rgba(0, 0, 0, 0.04);
+                border-radius: 3px;
+                background: map-get($colors, white);
+                @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                    @include size(null, 20em);
+                    @include margin(null, null, null, -5em);
+                }
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    @include size(100%, null);
+                }
+            }
+            &__title {
+                color: map-get($colors, white);
+                @include margin(null, null, 3em, null);
+                @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                    @include margin(1em, null, null, null);
+                    @include size(100%, null);
+                }
+            }
+        }
     }
     @media screen and (min-width: map-get($grid-breakpoints, lg)) {
         .embed-responsive {

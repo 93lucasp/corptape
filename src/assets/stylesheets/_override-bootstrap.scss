@@ -1,43 +1,44 @@
 .btn-secondary {
     border-radius: 50px;
-    background-color: map-get($colors, primary)!important;
-        color: #fff!important;
-    border: 1px solid map-get($colors, primary)!important;
     cursor: pointer;
     border: 0;
+    border: 1px solid map-get($colors, primary)!important;
+    color: map-get($colors, white)!important;
+    background-color: map-get($colors, primary)!important;
     &:hover {
+        color: map-get($colors, white)!important;
         background-color: map-get($colors, primary)!important;
-        color: #fff!important;
     }
 }
+
 .btn-send {
-    background-color: #2D3A46;
-            color:#fff;
-            border-radius:50px;
+    border-radius: 50px;
+    color: map-get($colors, white);
+    background-color: map-get($colors, blue);
 }
+
 .btn-primary {
     border-radius: 50px;
-    color: map-get($colors, primary)!important;
-    border: 1px solid map-get($colors, primary)!important;
-    background-color: #fff!important;
     cursor: pointer;
     border: 0;
+    border: 1px solid map-get($colors, primary)!important;
+    color: map-get($colors, primary)!important;
+    background-color: map-get($colors, white)!important;
     &:hover {
-    	background-color: map-get($colors, primary)!important;
-        color: #fff!important;
+        color: map-get($colors, white)!important;
+        background-color: map-get($colors, primary)!important;
     }
 }
 
 .btn-more {
-    @include size(20%,null);
-    color: map-get($colors, primary)!important;
-    background-color: map-get($colors, white);
-    border: 1px solid map-get($colors, primary)!important;
+    @include size(20%, null);
     border-radius: 50px;
     cursor: pointer;
     border: 0;
+    border: 1px solid map-get($colors, primary)!important;
+    color: map-get($colors, primary)!important;
+    background-color: map-get($colors, white);
     &:focus {
         box-shadow: none;
     }
-    
 }
